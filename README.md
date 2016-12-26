@@ -30,3 +30,11 @@ The plugin supports all custom and default post types, such as Post, Page, Produ
 There is zero content lock-in with BS3 Grid Builder. The plugin can be deactivated, and all content is still available. Users can even continue to edit their content in the standard WordPress page editor if they wish.
 
 Want to use Bootstrap grid system on non-bootstrap themes? No problem, navigate to plugin options page and turn on Bootstrap grid and responsive utility stylesheet to use it with any theme you want!
+
+[Download plugin from WordPress Repository] (https://wordpress.org/plugins/bs3-grid-builder/)
+
+[Get free support at WordPress forum] (https://wordpress.org/support/plugin/bs3-grid-builder)
+
+[Offical plugin post page] (https://www.mypreview.one/downloads/bs3-grid-builder/)
+
+[Visit live/online demo] (https://demo.mypreview.one/bs3-grid-builder/)
