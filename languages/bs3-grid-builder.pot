@@ -1,0 +1,396 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"Project-Id-Version: BS3 Grid Builder\n"
+"POT-Creation-Date: 2016-12-18 07:01+0400\n"
+"PO-Revision-Date: 2016-12-18 07:00+0400\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.11\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-WPHeader: bs3-grid-builder.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: includes/class-activation.php:42
+#, php-format
+msgid ""
+"Welcome to BS3 Grid Builder! Start up and running with visiting our simple "
+"<a href=\"%s\" target=\"_self\">plugin option page</a>."
+msgstr ""
+
+#: includes/class-activation.php:44 includes/class-activation.php:58
+msgid "Dismiss this notice."
+msgstr ""
+
+#: includes/class-activation.php:56
+msgid ""
+"There was a problem deactivating the BS3 Grid Builder Plugin. Please try "
+"again."
+msgstr ""
+
+#: includes/class-activation.php:66
+msgid "Configuration"
+msgstr ""
+
+#: includes/class-back-compat.php:18
+#, php-format
+msgid ""
+"BS3 Grid Builder plugin requires at least WordPress 4.4+. You are running "
+"WordPress %s. Please upgrade and try again."
+msgstr ""
+
+#: includes/class-back-compat.php:22
+#, php-format
+msgid ""
+"BS3 Grid Builder plugin requires at least PHP 5.3+. You are running PHP %s. "
+"Please upgrade and try again."
+msgstr ""
+
+#: includes/grid-builder/class-additional-css.php:41
+msgid "CSS"
+msgstr ""
+
+#: includes/grid-builder/class-additional-css.php:46
+msgid "Additional CSS"
+msgstr ""
+
+#: includes/grid-builder/class-additional-css.php:51
+msgid ""
+"You can add your own CSS here. CSS allows you to customize the appearance "
+"and layout of your site with code. "
+msgstr ""
+
+#: includes/grid-builder/class-additional-css.php:52
+msgid "Disable Additional CSS"
+msgstr ""
+
+#: includes/grid-builder/class-additional-js.php:41
+msgid "JS"
+msgstr ""
+
+#: includes/grid-builder/class-additional-js.php:46
+msgid "Additional JS"
+msgstr ""
+
+#: includes/grid-builder/class-additional-js.php:51
+msgid ""
+"You can add your own JS here. Feel free to use \"$\" instead of jQuery. "
+msgstr ""
+
+#: includes/grid-builder/class-additional-js.php:52
+msgid "Disable Additional JS"
+msgstr ""
+
+#: includes/grid-builder/class-functions.php:23
+msgid "Select row layout:"
+msgstr ""
+
+#: includes/grid-builder/class-functions.php:85
+msgid "Apply Changes"
+msgstr ""
+
+#: includes/grid-builder/class-functions.php:97
+msgid "Label"
+msgstr ""
+
+#: includes/grid-builder/class-functions.php:105
+#: includes/grid-builder/class-functions.php:109
+msgid "Container"
+msgstr ""
+
+#: includes/grid-builder/class-functions.php:108
+#: includes/grid-builder/class-functions.php:157
+msgid "Default"
+msgstr ""
+
+#: includes/grid-builder/class-functions.php:110
+msgid "Container Fluid"
+msgstr ""
+
+#: includes/grid-builder/class-functions.php:117
+msgid "Container ID"
+msgstr ""
+
+#: includes/grid-builder/class-functions.php:125
+msgid "Container Class"
+msgstr ""
+
+#: includes/grid-builder/class-functions.php:133
+msgid "Layout"
+msgstr ""
+
+#: includes/grid-builder/class-functions.php:136
+msgid "1/1"
+msgstr ""
+
+#: includes/grid-builder/class-functions.php:137
+msgid "1/2 - 1/2"
+msgstr ""
+
+#: includes/grid-builder/class-functions.php:138
+msgid "2/3 - 1/3"
+msgstr ""
+
+#: includes/grid-builder/class-functions.php:139
+msgid "1/3 - 2/3"
+msgstr ""
+
+#: includes/grid-builder/class-functions.php:140
+msgid "1/3 - 1/3 - 1/3"
+msgstr ""
+
+#: includes/grid-builder/class-functions.php:141
+msgid "1/4 - 3/4"
+msgstr ""
+
+#: includes/grid-builder/class-functions.php:142
+msgid "3/4 - 1/4"
+msgstr ""
+
+#: includes/grid-builder/class-functions.php:143
+msgid "1/4 - 1/2 - 1/4"
+msgstr ""
+
+#: includes/grid-builder/class-functions.php:144
+msgid "1/4 - 1/4 - 1/4 - 1/4"
+msgstr ""
+
+#: includes/grid-builder/class-functions.php:145
+msgid "1/4 - 1/4 - 1/2"
+msgstr ""
+
+#: includes/grid-builder/class-functions.php:146
+msgid "1/2 - 1/4 - 1/4"
+msgstr ""
+
+#: includes/grid-builder/class-functions.php:147
+msgid "1/6 - 1/6 - 1/6 - 1/6 - 1/6 - 1/6"
+msgstr ""
+
+#: includes/grid-builder/class-functions.php:154
+msgid "Collapse Order"
+msgstr ""
+
+#: includes/grid-builder/class-functions.php:158
+msgid "Left to Right"
+msgstr ""
+
+#: includes/grid-builder/class-functions.php:159
+msgid "Right to Left"
+msgstr ""
+
+#: includes/grid-builder/class-functions.php:166
+msgid "Row ID"
+msgstr ""
+
+#: includes/grid-builder/class-functions.php:174
+msgid "Row Class"
+msgstr ""
+
+#: includes/grid-builder/class-functions.php:181
+#: includes/grid-builder/class-functions.php:241
+msgid "Disable on"
+msgstr ""
+
+#: includes/grid-builder/class-functions.php:188
+#: includes/grid-builder/class-functions.php:248
+msgid "Phones (<768px)"
+msgstr ""
+
+#: includes/grid-builder/class-functions.php:195
+#: includes/grid-builder/class-functions.php:255
+msgid "Tablets (≥768px)"
+msgstr ""
+
+#: includes/grid-builder/class-functions.php:203
+#: includes/grid-builder/class-functions.php:263
+msgid "Desktops (≥992px)"
+msgstr ""
+
+#: includes/grid-builder/class-functions.php:210
+#: includes/grid-builder/class-functions.php:270
+msgid "Desktops (≥1200px)"
+msgstr ""
+
+#: includes/grid-builder/class-functions.php:226
+msgid "Column ID"
+msgstr ""
+
+#: includes/grid-builder/class-functions.php:234
+msgid "Column Class"
+msgstr ""
+
+#: includes/grid-builder/class-functions.php:296
+msgid "Add Item"
+msgstr ""
+
+#: includes/grid-builder/class-gbf.php:71
+msgid "Edit Content"
+msgstr ""
+
+#: includes/grid-builder/class-gbf.php:236
+msgid "The changes you made will be lost if you navigate away from this page"
+msgstr ""
+
+#: includes/grid-builder/class-portability.php:40
+#: includes/grid-builder/class-portability.php:43
+msgid "Portability"
+msgstr ""
+
+#: includes/grid-builder/class-portability.php:50
+#: includes/grid-builder/class-portability.php:59
+msgid "Export"
+msgstr ""
+
+#: includes/grid-builder/class-portability.php:53
+#: includes/grid-builder/class-portability.php:66
+msgid "Import"
+msgstr ""
+
+#: includes/grid-builder/class-portability.php:57
+msgid ""
+"Exporting your BS3 Grid Builder Layout will create a JSON code that can be "
+"imported into a different website."
+msgstr ""
+
+#: includes/grid-builder/class-portability.php:58
+msgid "No Data"
+msgstr ""
+
+#: includes/grid-builder/class-portability.php:64
+msgid ""
+"Importing a previously-generated BS3 Grid Builder Layout file will overwrite "
+"all content currently on this page."
+msgstr ""
+
+#: includes/grid-builder/class-portability.php:65
+msgid "Paste previously-generated JSON code here."
+msgstr ""
+
+#: includes/grid-builder/class-portability.php:66
+msgid "Invalid File format. You should be inserting a JSON file."
+msgstr ""
+
+#: includes/grid-builder/class-switcher.php:68
+msgid "WP Editor"
+msgstr ""
+
+#: includes/grid-builder/class-switcher.php:69
+msgid "B"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+#: includes/grid-builder/class-switcher.php:69
+#: includes/plugin-settings/class-options-page.php:47
+#: includes/plugin-settings/class-options-page.php:48
+#: includes/plugin-settings/class-options-page.php:79
+msgid "BS3 Grid Builder"
+msgstr ""
+
+#: includes/grid-builder/underscore-js/template-item.php:46
+#: includes/grid-builder/underscore-js/template-row.php:50
+msgid "Press Ok to delete section, Cancel to leave?"
+msgstr ""
+
+#: includes/grid-builder/underscore-js/template-item.php:51
+msgid "Column Settings"
+msgstr ""
+
+#: includes/grid-builder/underscore-js/template-row.php:55
+msgid "Row Settings"
+msgstr ""
+
+#: includes/grid-builder/underscore-js/template-row.php:64
+msgid "1st Column"
+msgstr ""
+
+#: includes/grid-builder/underscore-js/template-row.php:68
+msgid "2nd Column"
+msgstr ""
+
+#: includes/grid-builder/underscore-js/template-row.php:72
+msgid "3rd Column"
+msgstr ""
+
+#: includes/grid-builder/underscore-js/template-row.php:76
+msgid "4th Column"
+msgstr ""
+
+#: includes/grid-builder/underscore-js/template-row.php:80
+msgid "5th Column"
+msgstr ""
+
+#: includes/grid-builder/underscore-js/template-row.php:84
+msgid "6th Column"
+msgstr ""
+
+#: includes/plugin-settings/class-options-page.php:57
+#: includes/plugin-settings/class-options-page.php:63
+#: includes/plugin-settings/class-options-page.php:71
+#: includes/plugin-settings/class-options-page.php:81
+msgid "General Settings"
+msgstr ""
+
+#: includes/plugin-settings/class-options-page.php:67
+msgid "Activate BS3 Grid Builder"
+msgstr ""
+
+#: includes/plugin-settings/class-options-page.php:82
+#: includes/plugin-settings/class-options-page.php:188
+msgid "Post Types"
+msgstr ""
+
+#: includes/plugin-settings/class-options-page.php:89
+msgid "Click to toggle"
+msgstr ""
+
+#: includes/plugin-settings/class-options-page.php:115
+msgid "About the plugin"
+msgstr ""
+
+#: includes/plugin-settings/class-options-page.php:117
+#, php-format
+msgid ""
+"Please read more about this awesome plugin on %s on the website of MyPreview "
+"LLC."
+msgstr ""
+
+#: includes/plugin-settings/class-options-page.php:120
+msgid "Copyright 2015-16"
+msgstr ""
+
+#: includes/plugin-settings/class-options-page.php:172
+msgid "Enqueue Stylesheet"
+msgstr ""
+
+#: includes/plugin-settings/class-options-page.php:177
+msgid ""
+"Bootstrap's responsive grid and responsive utility classes only, without any "
+"extras."
+msgstr ""
+
+#: includes/plugin-settings/class-options-page.php:206
+msgid "Note: By default BS3 Grid Builder is available for pages only."
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+#. Author URI of the plugin/theme
+msgid "https://www.mypreview.one"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "Bootstrap 3 grid builder."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Mahdi Yazdani"
+msgstr ""

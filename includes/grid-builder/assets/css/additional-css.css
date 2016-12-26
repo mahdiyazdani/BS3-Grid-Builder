@@ -1,0 +1,63 @@
+/**
+ * Additional CSS
+ *
+ * @author      Mahdi Yazdani
+ * @package     BS3 Grid Builder
+ * @since       1.0
+ */
+.bs3-grid-builder-nav-css {
+    font-size: 14px;
+    float: right;
+    text-decoration: none;
+    padding: 5px 10px;
+    background: #F5F5F5;
+    border: 1px solid #ccc;
+    color: #555;
+    font-weight: 400;
+    margin-right: 0;
+    display: none;
+}
+.rtl .bs3-grid-builder-nav-css {
+    float: left;
+    margin-right: 0;
+    margin-left: -14px;
+}
+.bs3_grid_builder_active .bs3-grid-builder-nav-css {
+    display: block;
+}
+.bs3-grid-builder-nav-css:hover,
+.bs3-grid-builder-nav-css:focus {
+    color: #222;
+    background: #eee;
+}
+.bs3-grid-builder-nav-css span:before {
+    content: '\f540';
+    font-family: 'dashicons';
+    vertical-align: top;
+    margin-right: 5px;
+    -webkit-font-smoothing: antialiased;
+}
+.bs3-grid-builder-additional-css-textarea {
+    width: 100%;
+    height: 300px;
+    max-height: 100%;
+    font-family: Consolas, Monaco, monospace;
+    font-size: 18px;
+    line-height: 150%;
+    direction: ltr;
+}
+/* Media Queries */
+
+@media only screen and (max-width: 600px) {
+    .bs3-grid-builder-nav-css {
+        clear: both;
+        padding: 8px 10px;
+        margin: 10px 0 0 0;
+    }
+}
+@media only screen and (max-width: 390px) {
+    .bs3-grid-builder-nav-css span:before {
+        content: '';
+        margin-right: 0;
+    }
+}
