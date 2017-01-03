@@ -4,7 +4,7 @@
  *
  * @author      Mahdi Yazdani
  * @package     BS3 Grid Builder
- * @since       1.0
+ * @since       1.0.1
  */
 namespace bs3_grid_builder\builder;
 use bs3_grid_builder\BS3_Grid_Builder_Functions as Bs3;
@@ -81,7 +81,7 @@ class BS3_Grid_Builder_Portability{
 		endif;
 		if( post_type_supports( $post_type, 'editor' ) && post_type_supports( $post_type, 'bs3_grid_builder' ) ):
 			wp_enqueue_style( 'bs3-grid-builder-portability', URI . 'assets/css/portability.css', array( 'bs3-grid-builder' ), VERSION );
-			wp_register_script( 'serialize-object', URI . 'assets/js/jquery.serialize-object.min.js', array( 'jquery' ), VERSION, true );
+			wp_register_script( 'serialize-object', URI . 'assets/js/jquery.serialize-object.min.js', array( 'jquery' ), VERSION, false );
 			wp_enqueue_script( 'bs3-grid-builder-portability', URI . 'assets/js/portability.js', array( 'jquery', 'bs3-grid-builder-item', 'serialize-object' ), VERSION, true );
 			$ajax_data = array(
 				'ajax_url'         => admin_url( 'admin-ajax.php' ),
