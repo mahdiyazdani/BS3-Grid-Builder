@@ -24,6 +24,7 @@ Main Features:
 * Comes with Empty and Blank page templates.
 * No premium, 100% Free and Open Source.
 * Translate into your language.
+* Displays the Full TinyMCE Editor.
 
 The plugin supports all custom and default post types, such as Post, Page, Product, Download, Portfolio, etc. By default BS3 Grid Builder is available for pages only. However, you can optionally activate grid builder functionality for any post type you want!
 
