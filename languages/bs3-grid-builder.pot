@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: BS3 Grid Builder\n"
-"POT-Creation-Date: 2016-12-18 07:01+0400\n"
-"PO-Revision-Date: 2016-12-18 07:00+0400\n"
+"POT-Creation-Date: 2017-01-04 06:20+0400\n"
+"PO-Revision-Date: 2017-01-04 06:20+0400\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -20,24 +20,44 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
-#: includes/class-activation.php:42
+#: includes/class-activation.php:48
 #, php-format
 msgid ""
 "Welcome to BS3 Grid Builder! Start up and running with visiting our simple "
 "<a href=\"%s\" target=\"_self\">plugin option page</a>."
 msgstr ""
 
-#: includes/class-activation.php:44 includes/class-activation.php:58
+#: includes/class-activation.php:50 includes/class-activation.php:103
 msgid "Dismiss this notice."
 msgstr ""
 
-#: includes/class-activation.php:56
+#: includes/class-activation.php:60
+msgid "Add Blockquote"
+msgstr ""
+
+#: includes/class-activation.php:61
+msgid "Blockquote"
+msgstr ""
+
+#: includes/class-activation.php:62
+msgid "Quote"
+msgstr ""
+
+#: includes/class-activation.php:63
+msgid "Citation"
+msgstr ""
+
+#: includes/class-activation.php:64
+msgid "Citation Link"
+msgstr ""
+
+#: includes/class-activation.php:101
 msgid ""
 "There was a problem deactivating the BS3 Grid Builder Plugin. Please try "
 "again."
 msgstr ""
 
-#: includes/class-activation.php:66
+#: includes/class-activation.php:130
 msgid "Configuration"
 msgstr ""
 
@@ -90,154 +110,154 @@ msgstr ""
 msgid "Disable Additional JS"
 msgstr ""
 
-#: includes/grid-builder/class-functions.php:23
+#: includes/grid-builder/class-functions.php:26
 msgid "Select row layout:"
 msgstr ""
 
-#: includes/grid-builder/class-functions.php:85
+#: includes/grid-builder/class-functions.php:88
 msgid "Apply Changes"
 msgstr ""
 
-#: includes/grid-builder/class-functions.php:97
+#: includes/grid-builder/class-functions.php:100
 msgid "Label"
 msgstr ""
 
-#: includes/grid-builder/class-functions.php:105
-#: includes/grid-builder/class-functions.php:109
+#: includes/grid-builder/class-functions.php:108
+#: includes/grid-builder/class-functions.php:112
 msgid "Container"
 msgstr ""
 
-#: includes/grid-builder/class-functions.php:108
-#: includes/grid-builder/class-functions.php:157
+#: includes/grid-builder/class-functions.php:111
+#: includes/grid-builder/class-functions.php:160
 msgid "Default"
 msgstr ""
 
-#: includes/grid-builder/class-functions.php:110
+#: includes/grid-builder/class-functions.php:113
 msgid "Container Fluid"
 msgstr ""
 
-#: includes/grid-builder/class-functions.php:117
+#: includes/grid-builder/class-functions.php:120
 msgid "Container ID"
 msgstr ""
 
-#: includes/grid-builder/class-functions.php:125
+#: includes/grid-builder/class-functions.php:128
 msgid "Container Class"
 msgstr ""
 
-#: includes/grid-builder/class-functions.php:133
+#: includes/grid-builder/class-functions.php:136
 msgid "Layout"
 msgstr ""
 
-#: includes/grid-builder/class-functions.php:136
+#: includes/grid-builder/class-functions.php:139
 msgid "1/1"
 msgstr ""
 
-#: includes/grid-builder/class-functions.php:137
+#: includes/grid-builder/class-functions.php:140
 msgid "1/2 - 1/2"
 msgstr ""
 
-#: includes/grid-builder/class-functions.php:138
+#: includes/grid-builder/class-functions.php:141
 msgid "2/3 - 1/3"
 msgstr ""
 
-#: includes/grid-builder/class-functions.php:139
+#: includes/grid-builder/class-functions.php:142
 msgid "1/3 - 2/3"
 msgstr ""
 
-#: includes/grid-builder/class-functions.php:140
+#: includes/grid-builder/class-functions.php:143
 msgid "1/3 - 1/3 - 1/3"
 msgstr ""
 
-#: includes/grid-builder/class-functions.php:141
+#: includes/grid-builder/class-functions.php:144
 msgid "1/4 - 3/4"
 msgstr ""
 
-#: includes/grid-builder/class-functions.php:142
+#: includes/grid-builder/class-functions.php:145
 msgid "3/4 - 1/4"
 msgstr ""
 
-#: includes/grid-builder/class-functions.php:143
+#: includes/grid-builder/class-functions.php:146
 msgid "1/4 - 1/2 - 1/4"
 msgstr ""
 
-#: includes/grid-builder/class-functions.php:144
+#: includes/grid-builder/class-functions.php:147
 msgid "1/4 - 1/4 - 1/4 - 1/4"
 msgstr ""
 
-#: includes/grid-builder/class-functions.php:145
+#: includes/grid-builder/class-functions.php:148
 msgid "1/4 - 1/4 - 1/2"
 msgstr ""
 
-#: includes/grid-builder/class-functions.php:146
+#: includes/grid-builder/class-functions.php:149
 msgid "1/2 - 1/4 - 1/4"
 msgstr ""
 
-#: includes/grid-builder/class-functions.php:147
+#: includes/grid-builder/class-functions.php:150
 msgid "1/6 - 1/6 - 1/6 - 1/6 - 1/6 - 1/6"
 msgstr ""
 
-#: includes/grid-builder/class-functions.php:154
+#: includes/grid-builder/class-functions.php:157
 msgid "Collapse Order"
 msgstr ""
 
-#: includes/grid-builder/class-functions.php:158
+#: includes/grid-builder/class-functions.php:161
 msgid "Left to Right"
 msgstr ""
 
-#: includes/grid-builder/class-functions.php:159
+#: includes/grid-builder/class-functions.php:162
 msgid "Right to Left"
 msgstr ""
 
-#: includes/grid-builder/class-functions.php:166
+#: includes/grid-builder/class-functions.php:169
 msgid "Row ID"
 msgstr ""
 
-#: includes/grid-builder/class-functions.php:174
+#: includes/grid-builder/class-functions.php:177
 msgid "Row Class"
 msgstr ""
 
-#: includes/grid-builder/class-functions.php:181
-#: includes/grid-builder/class-functions.php:241
+#: includes/grid-builder/class-functions.php:184
+#: includes/grid-builder/class-functions.php:244
 msgid "Disable on"
 msgstr ""
 
-#: includes/grid-builder/class-functions.php:188
-#: includes/grid-builder/class-functions.php:248
+#: includes/grid-builder/class-functions.php:191
+#: includes/grid-builder/class-functions.php:251
 msgid "Phones (<768px)"
 msgstr ""
 
-#: includes/grid-builder/class-functions.php:195
-#: includes/grid-builder/class-functions.php:255
+#: includes/grid-builder/class-functions.php:198
+#: includes/grid-builder/class-functions.php:258
 msgid "Tablets (≥768px)"
 msgstr ""
 
-#: includes/grid-builder/class-functions.php:203
-#: includes/grid-builder/class-functions.php:263
+#: includes/grid-builder/class-functions.php:206
+#: includes/grid-builder/class-functions.php:266
 msgid "Desktops (≥992px)"
 msgstr ""
 
-#: includes/grid-builder/class-functions.php:210
-#: includes/grid-builder/class-functions.php:270
+#: includes/grid-builder/class-functions.php:213
+#: includes/grid-builder/class-functions.php:273
 msgid "Desktops (≥1200px)"
 msgstr ""
 
-#: includes/grid-builder/class-functions.php:226
+#: includes/grid-builder/class-functions.php:229
 msgid "Column ID"
 msgstr ""
 
-#: includes/grid-builder/class-functions.php:234
+#: includes/grid-builder/class-functions.php:237
 msgid "Column Class"
 msgstr ""
 
-#: includes/grid-builder/class-functions.php:296
+#: includes/grid-builder/class-functions.php:299
 msgid "Add Item"
 msgstr ""
 
-#: includes/grid-builder/class-gbf.php:71
+#: includes/grid-builder/class-gbf.php:72
 msgid "Edit Content"
 msgstr ""
 
-#: includes/grid-builder/class-gbf.php:236
+#: includes/grid-builder/class-gbf.php:238
 msgid "The changes you made will be lost if you navigate away from this page"
 msgstr ""
 
@@ -388,7 +408,9 @@ msgid "https://www.mypreview.one"
 msgstr ""
 
 #. Description of the plugin/theme
-msgid "Bootstrap 3 grid builder."
+msgid ""
+"Bootstrap Grid Builder is a powerful WordPress plugin for designing and "
+"prototyping websites."
 msgstr ""
 
 #. Author of the plugin/theme

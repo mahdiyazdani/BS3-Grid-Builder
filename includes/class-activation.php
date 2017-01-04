@@ -4,7 +4,7 @@
  *
  * @author      Mahdi Yazdani
  * @package     BS3 Grid Builder
- * @since       1.0.1
+ * @since       1.0.2
  */
 // Prevent direct file access
 defined( 'ABSPATH' ) or exit;
@@ -13,12 +13,16 @@ class BS3_Grid_Builder_Activation {
 
 	private $file;
 	private $dir;
+	private $assets_url;
 
 	public function __construct( $file, $plugin ) {
 	 	$this->file = $plugin;
 	 	$this->dir = dirname( $this->file );
+	 	$this->admin_assets_url = esc_url( trailingslashit( plugins_url( 'admin/', $this->file ) ) );
 	 	add_action( 'init', array( $this, 'textdomain' ), 10 );
 		add_action( 'admin_notices', array( $this, 'activation' ), 10 );
+		add_action( 'admin_enqueue_scripts', array( $this, 'admin_enqueue' ), 10 );
+		add_action( 'admin_head', array( $this, 'TinyMCE_button_init' ), 10 );
 		register_deactivation_hook( $file, array( $this, 'deactivation' ) );
 		add_filter( 'mce_buttons_3', array( $this, 'fontsize_filter' ), 10, 1 );
 		add_filter( 'tiny_mce_before_init', array( $this, 'format_TinyMCE' ), 10, 1 );
@@ -49,6 +53,45 @@ class BS3_Grid_Builder_Activation {
 		endif;
 	}
 
+	// Enqueue scripts and styles.
+	// @link https://github.com/devinsays/better-blockquotes
+	public function admin_enqueue() {
+		wp_localize_script('editor', 'bs3_grid_builder_better_blockquotes', array( 
+			'add_blockquote' => __('Add Blockquote', 'bs3-grid-builder') ,
+			'blockquote' => __('Blockquote', 'bs3-grid-builder') ,
+			'quote' => __('Quote', 'bs3-grid-builder') ,
+			'citation' => __('Citation', 'bs3-grid-builder') ,
+			'citation_link' => __('Citation Link', 'bs3-grid-builder')
+		));
+	}
+	// TinyMCE Button Init
+	public function TinyMCE_button_init() {
+		// Exit if user can't edit posts
+		if (!current_user_can('edit_posts') && !current_user_can('edit_pages')):
+			return;
+		endif;
+		// Exit if rich editing is not enable
+		if ('true' != get_user_option('rich_editing')):
+			return;
+		endif;
+		add_filter('mce_buttons', array( $this, 'register_tinyMCE_button' ));
+		add_filter('mce_external_plugins', array( $this, 'add_tinyMCE_plugin' ));
+	}
+	// Loads the javascript required for the custom TinyMCE button
+	function add_tinyMCE_plugin($plugin_array) {
+		$plugin_array['bs3_grid_builder_better_blockquote'] = $this->admin_assets_url . 'js/blockquotes.js';
+		return $plugin_array;
+	}
+	// Add the button to TinyMCE
+	function register_tinyMCE_button($buttons) {
+		// Removes the default blockquote button
+		if (false !== ($key = array_search('blockquote', $buttons))):
+			unset($buttons[$key]);
+		endif;
+		// Add the custom blockquotes button
+		array_push($buttons, 'bs3_grid_builder_better_blockquote');
+		return $buttons;
+	}
 	// Run once plugin deactivated
 	public function deactivation() {
 		// Delete plugin activation notice value from database
@@ -73,9 +116,6 @@ class BS3_Grid_Builder_Activation {
 		$buttons[] = 'newdocument';
 		$buttons[] = 'cut';
 		$buttons[] = 'copy';
-		$buttons[] = 'charmap';
-		$buttons[] = 'hr';
-		$buttons[] = 'visualaid';
 		return $buttons;
 	}
 
@@ -94,3 +134,4 @@ class BS3_Grid_Builder_Activation {
 }
 
 new BS3_Grid_Builder_Activation($file, $plugin);
+

@@ -4,7 +4,7 @@
  *
  * @author      Mahdi Yazdani
  * @package     BS3 Grid Builder
- * @since       1.0
+ * @since       1.0.2
  */
 namespace bs3_grid_builder\builder;
 use bs3_grid_builder\BS3_Grid_Builder_Functions as Bs3;
@@ -35,6 +35,7 @@ class BS3_Grid_Builder_GBF{
 	}
 
 	// Get Admin Color in Global
+	// Currently uses Bootstrap styles, maybe in the future?!
 	public function global_admin_color(){
 		global $pagenow, $_wp_admin_css_colors, $bs3_grid_builder_admin_color;
 		// Default color scheme
@@ -70,6 +71,7 @@ class BS3_Grid_Builder_GBF{
 					'id'        => 'bs3-grid-builder-editor',
 					'title'     => __( 'Edit Content', 'bs3-grid-builder' ),
 					'width'     => '800px',
+					'height'    => 'auto',
 					'callback'  => function(){
 						wp_editor( '', 'bs3_grid_builder_editor', array(
 							'tinymce'       => array(

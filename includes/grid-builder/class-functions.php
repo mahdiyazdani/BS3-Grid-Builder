@@ -4,7 +4,7 @@
  *
  * @author      Mahdi Yazdani
  * @package     BS3 Grid Builder
- * @since       1.0
+ * @since       1.0.2
  */
 namespace bs3_grid_builder\builder;
 use bs3_grid_builder\BS3_Grid_Builder_Functions as Bs3;
@@ -14,57 +14,60 @@ defined( 'ABSPATH' ) or exit;
 
 class BS3_Grid_Builder_Functions{
 
+	public $break_now;
+
 	// Add a new row
 	public static function add_row_field( $method = 'prepend' ){
-		global $bs3_grid_builder_admin_color;
-		?>
-		<div class="bs3-grid-builder-add-row" data-add_row_method="<?php echo esc_attr( $method ); ?>">
-			<div class="layout-thumb-wrap layout-thumb-label">
-				<span><?php _e( 'Select row layout:', 'bs3-grid-builder' ); ?></span>
-			</div>
-			<div class="layout-thumb-wrap">
-				<div class="layout-thumb" data-row-layout="1" data-row-col_num="1"><i class="bs3-grid-builder-font-icon bs3-grid-builder-1_1" title="1/1"></i></div>
-			</div>
-			<div class="layout-thumb-wrap">
-				<div class="layout-thumb" data-row-layout="12_12" data-row-col_num="2"><i class="bs3-grid-builder-font-icon bs3-grid-builder-12_12" title="1/2 - 1/2"></i></div>
-			</div>
-			<div class="layout-thumb-wrap">
-				<div class="layout-thumb" data-row-layout="23_13" data-row-col_num="2"><i class="bs3-grid-builder-font-icon bs3-grid-builder-23_13" title="2/3 - 1/3"></i></div>
-			</div>
-			<div class="layout-thumb-wrap">
-				<div class="layout-thumb" data-row-layout="13_23" data-row-col_num="2"><i class="bs3-grid-builder-font-icon bs3-grid-builder-13_23" title="1/3 - 2/3"></i></div>
-			</div>
-			<div class="layout-thumb-wrap">
-				<div class="layout-thumb" data-row-layout="13_13_13" data-row-col_num="3"><i class="bs3-grid-builder-font-icon bs3-grid-builder-13_13_13" title="1/3 - 1/3 - 1/3"></i></div>
-			</div>
-			<div class="layout-thumb-wrap">
-				<div class="layout-thumb" data-row-layout="14_34" data-row-col_num="2"><i class="bs3-grid-builder-font-icon bs3-grid-builder-14_34" title="1/4 - 3/4"></i></div>
-			</div>
-			<div class="layout-thumb-wrap">
-				<div class="layout-thumb" data-row-layout="34_14" data-row-col_num="2"><i class="bs3-grid-builder-font-icon bs3-grid-builder-34_14" title="3/4 - 1/4"></i></div>
-			</div>
-			<div class="layout-thumb-wrap">
-				<div class="layout-thumb" data-row-layout="14_12_14" data-row-col_num="3"><i class="bs3-grid-builder-font-icon bs3-grid-builder-14_12_14" title="1/4 - 1/2 - 1/4"></i></div>
-			</div>
-			<div class="layout-thumb-wrap">
-				<div class="layout-thumb" data-row-layout="14_14_14_14" data-row-col_num="4"><i class="bs3-grid-builder-font-icon bs3-grid-builder-14_14_14_14" title="1/4 - 1/4 - 1/4 - 1/4"></i></div>
-			</div>
-			<div class="layout-thumb-wrap">
-				<div class="layout-thumb" data-row-layout="14_14_12" data-row-col_num="3"><i class="bs3-grid-builder-font-icon bs3-grid-builder-14_14_12" title="1/4 - 1/4 - 1/2"></i></div>
-			</div>
-			<div class="layout-thumb-wrap">
-				<div class="layout-thumb" data-row-layout="12_14_14" data-row-col_num="3"><i class="bs3-grid-builder-font-icon bs3-grid-builder-12_14_14" title="1/2 - 1/4 - 1/4"></i></div>
-			</div>
-			<div class="layout-thumb-wrap">
-				<div class="layout-thumb" data-row-layout="16_16_16_16_16_16" data-row-col_num="6"><i class="bs3-grid-builder-font-icon bs3-grid-builder-16_16_16_16_16_16" title="1/6 - 1/6 - 1/6 - 1/6 - 1/6 - 1/6"></i></div>
-			</div>
-		</div><!-- .bs3-grid-builder-add-row -->
+		global $post;
+		if( isset( $post ) && $post->ID != get_option('page_for_posts') ):
+			?>
+			<div class="bs3-grid-builder-add-row" data-add_row_method="<?php echo esc_attr( $method ); ?>">
+				<div class="layout-thumb-wrap layout-thumb-label">
+					<span><?php _e( 'Select row layout:', 'bs3-grid-builder' ); ?></span>
+				</div>
+				<div class="layout-thumb-wrap">
+					<div class="layout-thumb" data-row-layout="1" data-row-col_num="1"><i class="bs3-grid-builder-font-icon bs3-grid-builder-1_1" title="1/1"></i></div>
+				</div>
+				<div class="layout-thumb-wrap">
+					<div class="layout-thumb" data-row-layout="12_12" data-row-col_num="2"><i class="bs3-grid-builder-font-icon bs3-grid-builder-12_12" title="1/2 - 1/2"></i></div>
+				</div>
+				<div class="layout-thumb-wrap">
+					<div class="layout-thumb" data-row-layout="23_13" data-row-col_num="2"><i class="bs3-grid-builder-font-icon bs3-grid-builder-23_13" title="2/3 - 1/3"></i></div>
+				</div>
+				<div class="layout-thumb-wrap">
+					<div class="layout-thumb" data-row-layout="13_23" data-row-col_num="2"><i class="bs3-grid-builder-font-icon bs3-grid-builder-13_23" title="1/3 - 2/3"></i></div>
+				</div>
+				<div class="layout-thumb-wrap">
+					<div class="layout-thumb" data-row-layout="13_13_13" data-row-col_num="3"><i class="bs3-grid-builder-font-icon bs3-grid-builder-13_13_13" title="1/3 - 1/3 - 1/3"></i></div>
+				</div>
+				<div class="layout-thumb-wrap">
+					<div class="layout-thumb" data-row-layout="14_34" data-row-col_num="2"><i class="bs3-grid-builder-font-icon bs3-grid-builder-14_34" title="1/4 - 3/4"></i></div>
+				</div>
+				<div class="layout-thumb-wrap">
+					<div class="layout-thumb" data-row-layout="34_14" data-row-col_num="2"><i class="bs3-grid-builder-font-icon bs3-grid-builder-34_14" title="3/4 - 1/4"></i></div>
+				</div>
+				<div class="layout-thumb-wrap">
+					<div class="layout-thumb" data-row-layout="14_12_14" data-row-col_num="3"><i class="bs3-grid-builder-font-icon bs3-grid-builder-14_12_14" title="1/4 - 1/2 - 1/4"></i></div>
+				</div>
+				<div class="layout-thumb-wrap">
+					<div class="layout-thumb" data-row-layout="14_14_14_14" data-row-col_num="4"><i class="bs3-grid-builder-font-icon bs3-grid-builder-14_14_14_14" title="1/4 - 1/4 - 1/4 - 1/4"></i></div>
+				</div>
+				<div class="layout-thumb-wrap">
+					<div class="layout-thumb" data-row-layout="14_14_12" data-row-col_num="3"><i class="bs3-grid-builder-font-icon bs3-grid-builder-14_14_12" title="1/4 - 1/4 - 1/2"></i></div>
+				</div>
+				<div class="layout-thumb-wrap">
+					<div class="layout-thumb" data-row-layout="12_14_14" data-row-col_num="3"><i class="bs3-grid-builder-font-icon bs3-grid-builder-12_14_14" title="1/2 - 1/4 - 1/4"></i></div>
+				</div>
+				<div class="layout-thumb-wrap">
+					<div class="layout-thumb" data-row-layout="16_16_16_16_16_16" data-row-col_num="6"><i class="bs3-grid-builder-font-icon bs3-grid-builder-16_16_16_16_16_16" title="1/6 - 1/6 - 1/6 - 1/6 - 1/6 - 1/6"></i></div>
+				</div>
+			</div><!-- .bs3-grid-builder-add-row -->
 		<?php
+		endif;
 	}
 
 	// Render modal box settings HTML
 	public static function render_settings( $args = array() ){
-		global $bs3_grid_builder_admin_color;
 		$args_default = array(
 			'id'        => '',
 			'title'     => '',
@@ -342,8 +345,11 @@ class BS3_Grid_Builder_Functions{
 			return false;
 		endif;
 		ob_start();
-		
+			$break_now = false;
 			foreach( $rows as $row_id ):
+				if( $break_now === true && get_post_type() == 'post' ):
+					break;
+				endif;
 				if( isset( $rows_data[$row_id] ) ):
 				// Container ID
 				$container_html_id = $rows_data[$row_id]['container_html_id'] ? ' id="' . $rows_data[$row_id]['container_html_id'] . '"' : '';
@@ -449,6 +455,9 @@ class BS3_Grid_Builder_Functions{
 						$items = $rows_data[$row_id]['col_' . $col];
 						$items = explode(",", $items);
 							foreach( $items as $item_id ):
+								if( preg_match( '/<!--more(.*?)?-->/', $items_data[$item_id]['content'] ) && ! is_single() && get_post_type() == 'post' ):
+									$break_now = true;
+								endif;
 								if( isset( $items_data[$item_id] ) ):
 									// Find 23_13, 13_23, 14_34 (2 Columns)
 									if(isset($grid_cols_cls_2) && !empty($grid_cols_cls_2) && $col == 2):
