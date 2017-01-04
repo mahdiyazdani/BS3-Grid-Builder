@@ -19,12 +19,14 @@ Main Features:
 * Custom CSS / JS for each page.
 * One-click collapse order. (LTR, RTL)
 * Make your row full width in one click.
+* Supports read more tag in blog posts.
 * Supports Bootstrap nested columns.
 * Supports Bootstrap responsive visibility classes.
 * Comes with Empty and Blank page templates.
 * No premium, 100% Free and Open Source.
 * Translate into your language.
 * Displays the Full TinyMCE Editor.
+* Custom blockquote option within citation and citation link support.
 
 The plugin supports all custom and default post types, such as Post, Page, Product, Download, Portfolio, etc. By default BS3 Grid Builder is available for pages only. However, you can optionally activate grid builder functionality for any post type you want!
 
