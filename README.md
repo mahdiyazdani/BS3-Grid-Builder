@@ -41,3 +41,17 @@ Want to use Bootstrap grid system on non-bootstrap themes? No problem, navigate 
 [Offical plugin post page] (https://www.mypreview.one/downloads/bs3-grid-builder/)
 
 [Visit live/online demo] (https://demo.mypreview.one/bs3-grid-builder/)
+
+*Change-log*
+
+<pre>
+= 1.0.2 =
+* Added custom blockquote option within citation and citation link support.
+* Supports read more tag in blog posts
+* Removed grid builder from blog posts page
+= 1.0.1 =
+* Fixed conflict with WooCommerce variable products
+* Enabled all the hidden buttons in TinyMCE
+= 1.0 =
+* Initial release.
+</pre>
