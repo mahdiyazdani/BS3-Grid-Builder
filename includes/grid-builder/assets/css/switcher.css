@@ -3,7 +3,7 @@
  *
  * @author      Mahdi Yazdani
  * @package     BS3 Grid Builder
- * @since       1.0
+ * @since       1.0.3
  */
 #bs3-grid-builder-wrapper {
     display: none !important;
@@ -65,6 +65,9 @@
 }
 .bs3_grid_builder_active #bs3-grid-builder-wrapper {
     display: block !important;
+}
+.bs3_grid_builder_active #post-preview {
+    display: none !important;
 }
 .wp-toolbar .wp-editor-tools,
 .wp-toolbar .mce-toolbar-grp.mce-container.mce-panel.mce-stack-layout-item {
