@@ -3,7 +3,7 @@
  *
  * @author      Mahdi Yazdani
  * @package     BS3 Grid Builder
- * @since       1.0
+ * @since       1.0.3
  */
  @font-face {
   font-family: 'BS3-Grid-Builder';
@@ -249,10 +249,10 @@ i.bs3-grid-builder-font-icon {
 .rtl .bs3-grid-builder-row[data-col_order] .bs3-grid-builder-col {
     float: right;
 }
-.bs3-grid-builder-row[data-col_order="l2r"] .bs3-grid-builder-col {
+.bs3-grid-builder-row[data-col_order="ltr"] .bs3-grid-builder-col {
     float: left;
 }
-.bs3-grid-builder-row[data-col_order="r2l"] .bs3-grid-builder-col {
+.bs3-grid-builder-row[data-col_order="rtl"] .bs3-grid-builder-col {
     float: right;
 }
 /* 1/1 */
