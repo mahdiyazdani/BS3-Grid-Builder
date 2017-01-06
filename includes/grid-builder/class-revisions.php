@@ -4,7 +4,7 @@
  *
  * @author      Mahdi Yazdani
  * @package     BS3 Grid Builder
- * @since       1.0
+ * @since       1.0.3
  */
 namespace bs3_grid_builder\builder;
 
@@ -34,6 +34,7 @@ class BS3_Grid_Builder_Revisions{
 		$parent_id = wp_is_post_revision( $post_id );
 		if ( $parent_id ) :
 			$parent     = get_post( $parent_id );
+			$active     = get_post_meta( $parent->ID, '_bs3_grid_builder_active', true );
 			$db_version = get_post_meta( $parent->ID, '_bs3_grid_builder_db_version', true );
 			$row_ids    = get_post_meta( $parent->ID, '_bs3_grid_builder_row_ids', true );
 			$rows       = get_post_meta( $parent->ID, '_bs3_grid_builder_rows', true );
@@ -41,6 +42,9 @@ class BS3_Grid_Builder_Revisions{
 			$js        	= get_post_meta( $parent->ID, '_bs3_grid_builder_custom_js', true );
 			$css        = get_post_meta( $parent->ID, '_bs3_grid_builder_custom_css', true );
 
+			if ( false !== $active ):
+				add_metadata( 'post', $post_id, '_bs3_grid_builder_active', $active );
+			endif;
 			if ( false !== $db_version ):
 				add_metadata( 'post', $post_id, '_bs3_grid_builder_db_version', $db_version );
 			endif;
@@ -67,6 +71,7 @@ class BS3_Grid_Builder_Revisions{
 
 		$revision   = get_post( $revision_id );
 
+		$active 	= get_metadata( 'post', $revision->ID, '_bs3_grid_builder_active', true );
 		$db_version = get_metadata( 'post', $revision->ID, '_bs3_grid_builder_db_version', true );
 		$row_ids    = get_metadata( 'post', $revision->ID, '_bs3_grid_builder_row_ids', true );
 		$rows       = get_metadata( 'post', $revision->ID, '_bs3_grid_builder_rows', true );
@@ -74,6 +79,11 @@ class BS3_Grid_Builder_Revisions{
 		$js        	= get_metadata( 'post', $revision->ID, '_bs3_grid_builder_custom_js', true );
 		$css        = get_metadata( 'post', $revision->ID, '_bs3_grid_builder_custom_css', true );
 
+		if ( false !== $active ):
+			update_post_meta( $post_id, '_bs3_grid_builder_active', $active );
+		else:
+			delete_post_meta( $post_id, '_bs3_grid_builder_active' );
+		endif;
 		if ( false !== $db_version ):
 			update_post_meta( $post_id, '_bs3_grid_builder_db_version', $db_version );
 		else:
