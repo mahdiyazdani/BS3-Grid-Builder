@@ -4,7 +4,7 @@
  *
  * @author      Mahdi Yazdani
  * @package     BS3 Grid Builder
- * @since       1.0.2
+ * @since       1.0.3
  */
 namespace bs3_grid_builder\builder;
 use bs3_grid_builder\BS3_Grid_Builder_Functions as Bs3;
@@ -158,8 +158,8 @@ class BS3_Grid_Builder_Functions{
 			</label>
 			<select id="bs3_grid_builder_rows[{{data.id}}][col_order]" data-row_field="col_order" name="_bs3_grid_builder_rows[{{data.id}}][col_order]" autocomplete="off">
 				<option value="" <# if( data.col_order == '' ){ print('selected="selected"') } #>><?php _e( 'Default', 'bs3-grid-builder' ); ?></option>
-				<option value="l2r" <# if( data.col_order == 'l2r' ){ print('selected="selected"') } #>><?php _e( 'Left to Right', 'bs3-grid-builder' ); ?></option>
-				<option value="r2l" <# if( data.col_order == 'r2l' ){ print('selected="selected"') } #>><?php _e( 'Right to Left', 'bs3-grid-builder' ); ?></option>
+				<option value="ltr" <# if( data.col_order == 'ltr' ){ print('selected="selected"') } #>><?php _e( 'Left to Right', 'bs3-grid-builder' ); ?></option>
+				<option value="rtl" <# if( data.col_order == 'rtl' ){ print('selected="selected"') } #>><?php _e( 'Right to Left', 'bs3-grid-builder' ); ?></option>
 			</select>
 		</div><!-- .bs3-grid-builder-modal-field -->
 
@@ -282,7 +282,6 @@ class BS3_Grid_Builder_Functions{
 
 	// Render (empty) Column
 	public static function render_column( $args = array() ){
-		global $bs3_grid_builder_admin_color;
 		$args_default = array(
 			'title'     => '',
 			'index'     => '',
@@ -451,81 +450,82 @@ class BS3_Grid_Builder_Functions{
 						break;
 					endswitch;
 					$current_column = 0;
+					$add_wrapper_class = false;
 					foreach( $cols as $col ):
 						$items = $rows_data[$row_id]['col_' . $col];
 						$items = explode(",", $items);
 							foreach( $items as $item_id ):
-								if( preg_match( '/<!--more(.*?)?-->/', $items_data[$item_id]['content'] ) && ! is_single() && get_post_type() == 'post' ):
-									$break_now = true;
-								endif;
-								if( isset( $items_data[$item_id] ) ):
-									// Find 23_13, 13_23, 14_34 (2 Columns)
-									if(isset($grid_cols_cls_2) && !empty($grid_cols_cls_2) && $col == 2):
-										$grid_cols_cls = $grid_cols_cls_2;
+								if(! empty($item_id) ):
+									if( preg_match( '/<!--more(.*?)?-->/', $items_data[$item_id]['content'] ) && ! is_single() && get_post_type() == 'post' ):
+										$break_now = true;
 									endif;
-									// Find 14_12_14, 14_14_12, 12_14_14 (3 Columns)
-									if(isset($grid_cols_cls_2, $grid_cols_cls_3) && !empty($grid_cols_cls_2) && !empty($grid_cols_cls_3) && $col == 3):
-										switch($grid_counter):
-											case 2:
-												$grid_cols_cls = $grid_cols_cls_2;
-											break;
-											case 3:
-												$grid_cols_cls = $grid_cols_cls_3;
-											break;
-										endswitch;
-									endif;
-									// Column wrapper and direction classes
-									$grid_cols_cls .= ' bs3-grid-col-wrapper';
-									$grid_cols_cls .= (esc_attr( $rows_data[$row_id]['col_order'] ) == 'r2l') ? ' pull-right' : '';
-									// Column ID
-									$column_html_id = $items_data[$item_id]['column_html_id'] ? ' id="' . $items_data[$item_id]['column_html_id'] . '"' : '';
-									// Column Class
-									$column_html_class = $items_data[$item_id]['column_html_class'] ? "bs3-grid-builder-child-item {$items_data[$item_id]['column_html_class']}" : "bs3-grid-builder-child-item";
-									$column_html_class = explode( ' ', $column_html_class ); // array
-									$column_html_class[] = 'bs3-grid-builder-col-' . intval( $col );
-									// Column responsive utilities
-									$column_disable_on_extra_small = esc_attr( $items_data[$item_id]['column_disable_on_extra_small'] );
-									if(isset($column_disable_on_extra_small) && $column_disable_on_extra_small == 1):
-										$column_html_class[] = 'hidden-xs';
-									endif;
-									$column_disable_on_small = esc_attr( $items_data[$item_id]['column_disable_on_small'] );
-									if(isset($column_disable_on_small) && $column_disable_on_small == 1):
-										$column_html_class[] = 'hidden-sm';
-									endif;
-									$column_disable_on_desktop_medium = esc_attr( $items_data[$item_id]['column_disable_on_desktop_medium'] );
-									if(isset($column_disable_on_desktop_medium) && $column_disable_on_desktop_medium == 1):
-										$column_html_class[] = 'hidden-md';
-									endif;
-									$column_disable_on_desktop_large = esc_attr( $items_data[$item_id]['column_disable_on_desktop_large'] );
-									if(isset($column_disable_on_desktop_large) && $column_disable_on_desktop_large == 1):
-										$column_html_class[] = 'hidden-lg';
-									endif;
-									// Sanitize and implode classes from array
-									$column_html_class = array_map( 'sanitize_html_class', $column_html_class );
-									$column_html_class = implode( ' ', $column_html_class );
-									// Check if column has a child or not?
-									if($current_column != intval( $col )):
-										// Don't close <div> if we are printing first column
-										if( intval( $col ) !== 1):
-											echo '</div><!-- .bs3-grid-col-wrapper -->';
+									if( isset( $items_data[$item_id] ) ):
+										// Find 23_13, 13_23, 14_34 (2 Columns)
+										if(isset($grid_cols_cls_2) && !empty($grid_cols_cls_2) && $col == 2):
+											$grid_cols_cls = $grid_cols_cls_2;
 										endif;
-										// Go to the next column
-										$current_column = intval( $col );
+										// Find 14_12_14, 14_14_12, 12_14_14 (3 Columns)
+										if(isset($grid_cols_cls_2, $grid_cols_cls_3) && !empty($grid_cols_cls_2) && !empty($grid_cols_cls_3) && $col == 3):
+											$grid_cols_cls = $grid_cols_cls_3;
+										endif;
+										// Append column wrapper class
+										if(strpos($grid_cols_cls, 'bs3-grid-col-wrapper') == false):
+											$grid_cols_cls .= ' bs3-grid-col-wrapper';
+										endif;
+										// Append pull-right class to wrapper
+										if(strpos($grid_cols_cls, 'pull-right') == false && esc_attr( $rows_data[$row_id]['col_order'] ) == 'rtl'):
+											$grid_cols_cls .= (esc_attr( $rows_data[$row_id]['col_order'] ) == 'rtl') ? ' pull-right' : '';
+										endif;
+										// Column ID
+										$column_html_id = $items_data[$item_id]['column_html_id'] ? ' id="' . $items_data[$item_id]['column_html_id'] . '"' : '';
+										// Column Class
+										$column_html_class = $items_data[$item_id]['column_html_class'] ? "bs3-grid-builder-child-item {$items_data[$item_id]['column_html_class']}" : "bs3-grid-builder-child-item";
+										$column_html_class = explode( ' ', $column_html_class ); // array
+										$column_html_class[] = 'bs3-grid-builder-col-' . intval( $col );
+										// Column responsive utilities
+										$column_disable_on_extra_small = esc_attr( $items_data[$item_id]['column_disable_on_extra_small'] );
+										if(isset($column_disable_on_extra_small) && $column_disable_on_extra_small == 1):
+											$column_html_class[] = 'hidden-xs';
+										endif;
+										$column_disable_on_small = esc_attr( $items_data[$item_id]['column_disable_on_small'] );
+										if(isset($column_disable_on_small) && $column_disable_on_small == 1):
+											$column_html_class[] = 'hidden-sm';
+										endif;
+										$column_disable_on_desktop_medium = esc_attr( $items_data[$item_id]['column_disable_on_desktop_medium'] );
+										if(isset($column_disable_on_desktop_medium) && $column_disable_on_desktop_medium == 1):
+											$column_html_class[] = 'hidden-md';
+										endif;
+										$column_disable_on_desktop_large = esc_attr( $items_data[$item_id]['column_disable_on_desktop_large'] );
+										if(isset($column_disable_on_desktop_large) && $column_disable_on_desktop_large == 1):
+											$column_html_class[] = 'hidden-lg';
+										endif;
+										// Sanitize and implode classes from array
+										$column_html_class = array_map( 'sanitize_html_class', $column_html_class );
+										$column_html_class = implode( ' ', $column_html_class );
+										// Check if column has a child or not?
+										if($current_column != intval( $col )):
+											// Don't close <div> if we are printing first column
+											if( intval( $col ) !== 1):
+												echo '</div><!-- .bs3-grid-col-wrapper -->';
+											endif;
+											// Go to the next column
+											$current_column = intval( $col );
+											?>
+											<div class="<?php echo $grid_cols_cls; ?>">
+											<div<?php echo $column_html_id; ?> class="<?php echo esc_attr( $column_html_class ); ?>">
+													<?php echo wpautop( $items_data[$item_id]['content'] ); ?>
+											</div><!-- .bs3-grid-builder-child-item -->
+										<?php 
+										else:
 										?>
-										<div class="<?php echo $grid_cols_cls; ?>">
-										<div<?php echo $column_html_id; ?> class="<?php echo esc_attr( $column_html_class ); ?>">
+											<div<?php echo $column_html_id; ?> class="<?php echo esc_attr( $column_html_class ); ?>">
 												<?php echo wpautop( $items_data[$item_id]['content'] ); ?>
-										</div><!-- .bs3-grid-builder-child-item -->
-									<?php 
-									else:
-									?>
-										<div<?php echo $column_html_id; ?> class="<?php echo esc_attr( $column_html_class ); ?>">
-											<?php echo wpautop( $items_data[$item_id]['content'] ); ?>
-										</div><!-- .bs3-grid-builder-child-item -->
-									<?php
+											</div><!-- .bs3-grid-builder-child-item -->
+										<?php
+										endif;
+										endif;
+										$grid_counter = $grid_counter + 1;
 									endif;
-									endif;
-									$grid_counter = $grid_counter + 1;
 								endforeach; 
 						endforeach; 
 					?>
