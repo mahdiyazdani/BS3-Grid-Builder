@@ -3,7 +3,7 @@
  *
  * @author      Mahdi Yazdani
  * @package     BS3 Grid Builder
- * @since       1.0
+ * @since       1.0.3
  */
 ;(function($) {
 
@@ -75,7 +75,7 @@ jQuery(document).ready(function($) {
                 col_5: '',
                 col_6: '',
             }
-            // Add template to container
+        // Add template to container
         if ("prepend" == $(this).parents('.bs3-grid-builder-add-row').data('add_row_method')) {
             $('#bs3-grid-builder').prepend(row_template(row_config));
         } else {
