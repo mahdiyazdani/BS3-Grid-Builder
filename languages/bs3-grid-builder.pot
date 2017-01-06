@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: BS3 Grid Builder\n"
-"POT-Creation-Date: 2017-01-04 06:20+0400\n"
-"PO-Revision-Date: 2017-01-04 06:20+0400\n"
+"POT-Creation-Date: 2017-01-07 02:23+0400\n"
+"PO-Revision-Date: 2017-01-07 02:23+0400\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -20,44 +20,44 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
-#: includes/class-activation.php:48
+#: includes/class-activation.php:47
 #, php-format
 msgid ""
 "Welcome to BS3 Grid Builder! Start up and running with visiting our simple "
 "<a href=\"%s\" target=\"_self\">plugin option page</a>."
 msgstr ""
 
-#: includes/class-activation.php:50 includes/class-activation.php:103
+#: includes/class-activation.php:49 includes/class-activation.php:102
 msgid "Dismiss this notice."
 msgstr ""
 
-#: includes/class-activation.php:60
+#: includes/class-activation.php:59
 msgid "Add Blockquote"
 msgstr ""
 
-#: includes/class-activation.php:61
+#: includes/class-activation.php:60
 msgid "Blockquote"
 msgstr ""
 
-#: includes/class-activation.php:62
+#: includes/class-activation.php:61
 msgid "Quote"
 msgstr ""
 
-#: includes/class-activation.php:63
+#: includes/class-activation.php:62
 msgid "Citation"
 msgstr ""
 
-#: includes/class-activation.php:64
+#: includes/class-activation.php:63
 msgid "Citation Link"
 msgstr ""
 
-#: includes/class-activation.php:101
+#: includes/class-activation.php:100
 msgid ""
 "There was a problem deactivating the BS3 Grid Builder Plugin. Please try "
 "again."
 msgstr ""
 
-#: includes/class-activation.php:130
+#: includes/class-activation.php:123
 msgid "Configuration"
 msgstr ""
 
@@ -249,15 +249,15 @@ msgstr ""
 msgid "Column Class"
 msgstr ""
 
-#: includes/grid-builder/class-functions.php:299
+#: includes/grid-builder/class-functions.php:298
 msgid "Add Item"
 msgstr ""
 
-#: includes/grid-builder/class-gbf.php:72
+#: includes/grid-builder/class-gbf.php:55
 msgid "Edit Content"
 msgstr ""
 
-#: includes/grid-builder/class-gbf.php:238
+#: includes/grid-builder/class-gbf.php:228
 msgid "The changes you made will be lost if you navigate away from this page"
 msgstr ""
 
@@ -300,56 +300,56 @@ msgstr ""
 msgid "Invalid File format. You should be inserting a JSON file."
 msgstr ""
 
-#: includes/grid-builder/class-switcher.php:68
+#: includes/grid-builder/class-switcher.php:66
 msgid "WP Editor"
 msgstr ""
 
-#: includes/grid-builder/class-switcher.php:69
+#: includes/grid-builder/class-switcher.php:67
 msgid "B"
 msgstr ""
 
 #. Plugin Name of the plugin/theme
-#: includes/grid-builder/class-switcher.php:69
+#: includes/grid-builder/class-switcher.php:67
 #: includes/plugin-settings/class-options-page.php:47
 #: includes/plugin-settings/class-options-page.php:48
 #: includes/plugin-settings/class-options-page.php:79
 msgid "BS3 Grid Builder"
 msgstr ""
 
-#: includes/grid-builder/underscore-js/template-item.php:46
-#: includes/grid-builder/underscore-js/template-row.php:50
+#: includes/grid-builder/underscore-js/template-item.php:49
+#: includes/grid-builder/underscore-js/template-row.php:51
 msgid "Press Ok to delete section, Cancel to leave?"
 msgstr ""
 
-#: includes/grid-builder/underscore-js/template-item.php:51
+#: includes/grid-builder/underscore-js/template-item.php:54
 msgid "Column Settings"
 msgstr ""
 
-#: includes/grid-builder/underscore-js/template-row.php:55
+#: includes/grid-builder/underscore-js/template-row.php:56
 msgid "Row Settings"
 msgstr ""
 
-#: includes/grid-builder/underscore-js/template-row.php:64
+#: includes/grid-builder/underscore-js/template-row.php:65
 msgid "1st Column"
 msgstr ""
 
-#: includes/grid-builder/underscore-js/template-row.php:68
+#: includes/grid-builder/underscore-js/template-row.php:69
 msgid "2nd Column"
 msgstr ""
 
-#: includes/grid-builder/underscore-js/template-row.php:72
+#: includes/grid-builder/underscore-js/template-row.php:73
 msgid "3rd Column"
 msgstr ""
 
-#: includes/grid-builder/underscore-js/template-row.php:76
+#: includes/grid-builder/underscore-js/template-row.php:77
 msgid "4th Column"
 msgstr ""
 
-#: includes/grid-builder/underscore-js/template-row.php:80
+#: includes/grid-builder/underscore-js/template-row.php:81
 msgid "5th Column"
 msgstr ""
 
-#: includes/grid-builder/underscore-js/template-row.php:84
+#: includes/grid-builder/underscore-js/template-row.php:85
 msgid "6th Column"
 msgstr ""
 
