@@ -45,6 +45,10 @@ Want to use Bootstrap grid system on non-bootstrap themes? No problem, navigate 
 *Change-log*
 
 <pre>
+= 1.0.3 =
+* Switcher save method changed.
+* Fixed grid builder column adjustment in nested layouts.
+* Minor changes.
 = 1.0.2 =
 * Added custom blockquote option within citation and citation link support.
 * Supports read more tag in blog posts
