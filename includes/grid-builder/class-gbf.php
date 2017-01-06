@@ -4,7 +4,7 @@
  *
  * @author      Mahdi Yazdani
  * @package     BS3 Grid Builder
- * @since       1.0.2
+ * @since       1.0.3
  */
 namespace bs3_grid_builder\builder;
 use bs3_grid_builder\BS3_Grid_Builder_Functions as Bs3;
@@ -24,29 +24,12 @@ class BS3_Grid_Builder_GBF{
 	}
 
 	public function __construct() {
-		// Get Admin Color
-		add_action( 'admin_head', array( $this, 'global_admin_color' ), 1 );
 		// Add it after editor in edit screen
 		add_action( 'edit_form_after_editor', array( $this, 'form' ) );
 		// Save BS3_Grid_Builder_GBF Data
 		add_action( 'save_post', array( $this, 'save' ), 10, 2 );
 		// Admin Scripts
 		add_action( 'admin_enqueue_scripts', array( $this, 'scripts' ), 99 );
-	}
-
-	// Get Admin Color in Global
-	// Currently uses Bootstrap styles, maybe in the future?!
-	public function global_admin_color(){
-		global $pagenow, $_wp_admin_css_colors, $bs3_grid_builder_admin_color;
-		// Default color scheme
-		$bs3_grid_builder_admin_color = array( '#222', '#333', '#0073aa', '#00a0d2' );
-		if( ! in_array( $pagenow, array( 'post.php', 'post-new.php' ) ) ):
-			return false;
-		endif;
-		$user_admin_color_scheme = get_user_option( 'admin_color' );
-		if( isset( $_wp_admin_css_colors[$user_admin_color_scheme]->colors ) ):
-			$bs3_grid_builder_admin_color = $_wp_admin_css_colors[$user_admin_color_scheme]->colors;
-		endif;
 	}
 
 	// Form
@@ -76,9 +59,9 @@ class BS3_Grid_Builder_GBF{
 						wp_editor( '', 'bs3_grid_builder_editor', array(
 							'tinymce'       => array(
 								'wp_autoresize_on' => false,
-								'resize'           => false,
+								'resize'           => false
 							),
-							'editor_height' => 300
+							'editor_height' => 330
 						) );
 					},
 				));
@@ -142,21 +125,28 @@ class BS3_Grid_Builder_GBF{
 
 		$request = stripslashes_deep( $_POST );
 		if ( ! isset( $request['bs3_grid_builder_nonce'] ) || ! wp_verify_nonce( $request['bs3_grid_builder_nonce'], __FILE__ ) ):
-			return false;
+			return $post_id;
 		endif;
 		if( defined('DOING_AUTOSAVE' ) && DOING_AUTOSAVE ):
-			return false;
+			return $post_id;
 		endif;
 		$post_type = get_post_type_object( $post->post_type );
 		if ( !current_user_can( $post_type->cap->edit_post, $post_id ) ):
-			return false;
+			return $post_id;
+		endif;
+		$wp_preview = isset( $request['wp-preview'] ) ? esc_attr( $request['wp-preview'] ) : false;
+		if( $wp_preview ):
+			return $post_id;
 		endif;
 
 		// Query switcher
-		$active = get_post_meta( $post_id, '_bs3_grid_builder_active', true );
+		$active = isset( $request['_bs3_grid_builder_active'] ) ? $request['_bs3_grid_builder_active'] : false;
 
+		if( $active ):
+			update_post_meta( $post_id, '_bs3_grid_builder_active', 1 );
 		// BS3 Grid Builder isn't active, delete all data.
-		if( !$active ):
+		else:
+			delete_post_meta( $post_id, '_bs3_grid_builder_active' );
 			delete_post_meta( $post_id, '_bs3_grid_builder_db_version' );
 			delete_post_meta( $post_id, '_bs3_grid_builder_row_ids' );
 			delete_post_meta( $post_id, '_bs3_grid_builder_rows' );
@@ -221,7 +211,7 @@ class BS3_Grid_Builder_GBF{
 		// Prevent infinite loop
 		remove_action( 'save_post', array( $this, __FUNCTION__ ) );
 		wp_update_post( $this_post );
-		add_action( 'save_post', array( $this, __FUNCTION__ ) );
+		add_action( 'save_post', array( $this, __FUNCTION__ ), 10, 2 );
 	}
 
 	// Admin scripts
