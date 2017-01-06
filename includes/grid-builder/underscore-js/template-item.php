@@ -14,6 +14,9 @@
  * Content:
  * "content"    : hidden textarea (?)
  *
+ * @author      Mahdi Yazdani
+ * @package     BS3 Grid Builder
+ * @since       1.0.3
 **/
 namespace bs3_grid_builder\builder;
 ?>
