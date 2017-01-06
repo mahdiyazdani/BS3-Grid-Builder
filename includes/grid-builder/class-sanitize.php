@@ -4,7 +4,7 @@
  *
  * @author      Mahdi Yazdani
  * @package     BS3 Grid Builder
- * @since       1.0
+ * @since       1.0.3
  */
 namespace bs3_grid_builder\builder;
 use bs3_grid_builder\BS3_Grid_Builder_Sanitize as Bs3;
@@ -132,8 +132,8 @@ class BS3_Grid_Builder_Sanitize{
 
 	// Sanitize Collapse Order
 	public static function col_order( $order ){
-		$default = is_rtl() ? 'r2l' : 'l2r';
-		$valid = array( 'r2l', 'l2r' );
+		$default = is_rtl() ? 'rtl' : 'ltr';
+		$valid = array( 'rtl', 'ltr' );
 		if( in_array( $order, $valid ) ):
 			return $order;
 		endif;
