@@ -4,7 +4,7 @@
  *
  * @author      Mahdi Yazdani
  * @package     BS3 Grid Builder
- * @since       1.0.2
+ * @since       1.0.3
  */
 // Prevent direct file access
 defined( 'ABSPATH' ) or exit;
@@ -25,7 +25,6 @@ class BS3_Grid_Builder_Activation {
 		add_action( 'admin_head', array( $this, 'TinyMCE_button_init' ), 10 );
 		register_deactivation_hook( $file, array( $this, 'deactivation' ) );
 		add_filter( 'mce_buttons_3', array( $this, 'fontsize_filter' ), 10, 1 );
-		add_filter( 'tiny_mce_before_init', array( $this, 'format_TinyMCE' ), 10, 1 );
 		add_filter( 'plugin_action_links_' . plugin_basename( $this->file ), array( $this, 'config_link' ), 10 );
 	 }
 
@@ -117,12 +116,6 @@ class BS3_Grid_Builder_Activation {
 		$buttons[] = 'cut';
 		$buttons[] = 'copy';
 		return $buttons;
-	}
-
-	// To keep the kitchen sink always on :)
-	public function format_TinyMCE( $in ) {
-		$in['wordpress_adv_hidden'] = FALSE;
-		return $in;
 	}
 
 	// Add plugin config link to Plugins page
