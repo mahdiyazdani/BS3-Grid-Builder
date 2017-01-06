@@ -13,7 +13,7 @@
  *
  * Settings Fields:
  * - "layout"       : column layout (1 col, 1/2 - 1/2, etc)
- * - "col_order"    : collapse order, "default" (no val), "l2r" (left first/on top) vs "r2l" (right first)
+ * - "col_order"    : collapse order, "default" (no val), "ltr" (left first/on top) vs "rtl" (right first)
  *
  * Item IDs Order (Hidden):
  * - "col_1"        : item IDs for 1st column in comma separated value
@@ -22,6 +22,10 @@
  * - "col_4"
  * - "col_5"
  * - "col_6"
+ *
+ * @author      Mahdi Yazdani
+ * @package     BS3 Grid Builder
+ * @since       1.0.3
 **/
 namespace bs3_grid_builder\builder;
 global $bs3_grid_builder_admin_color;
@@ -31,11 +35,8 @@ global $bs3_grid_builder_admin_color;
 
 		<?php /* HIDDEN FIELD */ ?>
 		<input type="hidden" data-row_field="id" name="_bs3_grid_builder_rows[{{data.id}}][id]" value="{{data.id}}" autocomplete="off"/>
-
 		<input type="hidden" data-row_field="index" name="_bs3_grid_builder_rows[{{data.id}}][index]" value="{{data.index}}" autocomplete="off"/>
-
 		<input type="hidden" data-row_field="state" name="_bs3_grid_builder_rows[{{data.id}}][state]" value="{{data.state}}" autocomplete="off"/>
-
 		<input type="hidden" data-row_field="col_num" name="_bs3_grid_builder_rows[{{data.id}}][col_num]" value="{{data.col_num}}" autocomplete="off"/>
 
 		<?php /* ROW MENU */ ?>
