@@ -2,8 +2,8 @@
 /*
 Plugin Name: 	BS3 Grid Builder
 Plugin URI:  	https://www.mypreview.one
-Description: 	Bootstrap Grid Builder is a powerful WordPress plugin for designing and prototyping websites.
-Version:     	1.0.3
+Description: 	Bootstrap Grid Builder is a powerful WordPress plugin for designing and prototyping modern websites.
+Version:     	1.0.4
 Author:      	Mahdi Yazdani
 Author URI:  	https://www.mypreview.one
 Text Domain: 	bs3-grid-builder
@@ -33,7 +33,7 @@ if (!function_exists('bs3_grid_builder_initialization')):
 		$path     = trailingslashit( plugin_dir_path( __FILE__ ) );
 		$file     = __FILE__;
 		$plugin   = plugin_basename( __FILE__ );
-		$version  = '1.0.3';
+		$version  = '1.0.4';
 
 		// Run if admin is already logged in
 		if ( is_admin() ) :
