@@ -4,7 +4,7 @@
  *
  * @author      Mahdi Yazdani
  * @package     BS3 Grid Builder
- * @since       1.0.3
+ * @since       1.0.4
  */
 namespace bs3_grid_builder\builder;
 use bs3_grid_builder\BS3_Grid_Builder_Functions as Bs3;
@@ -456,7 +456,7 @@ class BS3_Grid_Builder_Functions{
 						$items = explode(",", $items);
 							foreach( $items as $item_id ):
 								if(! empty($item_id) ):
-									if( preg_match( '/<!--more(.*?)?-->/', $items_data[$item_id]['content'] ) && ! is_single() && get_post_type() == 'post' ):
+									if( preg_match( '/<!--more(.*?)?-->/', $items_data[$item_id]['content'] ) && ! is_single() && get_post_type() == 'post' && apply_filters('bs3_grid_builder_append_readmore_tag', true) === true ):
 										$break_now = true;
 									endif;
 									if( isset( $items_data[$item_id] ) ):
