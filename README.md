@@ -45,6 +45,8 @@ Want to use Bootstrap grid system on non-bootstrap themes? No problem, navigate 
 *Change-log*
 
 <pre>
+= 1.0.4 =
+* Added a new filter for skipping readmore tag in blog posts.
 = 1.0.3 =
 * Switcher save method changed.
 * Fixed grid builder column adjustment in nested layouts.
