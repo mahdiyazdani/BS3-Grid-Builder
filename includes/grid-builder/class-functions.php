@@ -85,7 +85,7 @@ class BS3_Grid_Builder_Functions{
 						call_user_func( $args['callback'] );
 					} ?>
 				</div><!-- .bs3-grid-builder-modal-content -->
-				<div class="bs3-grid-builder-modal-footer"><button type="button" class="btn btn-primary bs3-grid-builder-modal-close"><?php _e( 'Apply Changes', 'bs3-grid-builder' ); ?></button></div><!-- .bs3-grid-builder-modal-footer -->
+				<div class="bs3-grid-builder-modal-footer"><button type="button" class="btn button-primary bs3-grid-builder-modal-close"><?php _e( 'Apply Changes', 'bs3-grid-builder' ); ?></button></div><!-- .bs3-grid-builder-modal-footer -->
 			</div><!-- .bs3-grid-builder-modal-container -->
 		</div><!-- .bs3-grid-builder-modal -->
 		<?php
