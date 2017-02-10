@@ -206,7 +206,7 @@ class BS3_Grid_Builder_Options_Page{
 						<?php
 					endif;
 				endforeach;
-				echo '<small><em>' . __('Note: By default BS3 Grid Builder is available for pages only.', 'bs3_grid_builder') . '</em></small>';
+				echo '<br><br><small><em>' . __('Note: By default BS3 Grid Builder is available for pages only.', 'bs3_grid_builder') . '</em></small>';
 			},
 			$settings_slug     = 'bs3_grid_builder_post_type_settings_admin',
 			$section_id        = 'bs3_grid_builder_post_type_settings'
