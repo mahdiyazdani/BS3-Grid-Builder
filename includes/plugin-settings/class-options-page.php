@@ -4,7 +4,7 @@
  *
  * @author      Mahdi Yazdani
  * @package     BS3 Grid Builder
- * @since       1.0
+ * @since       1.0.5
  */
 namespace bs3_grid_builder\options_page;
 use bs3_grid_builder\BS3_Grid_Builder_Functions as Bs3;
@@ -111,15 +111,18 @@ class BS3_Grid_Builder_Options_Page{
 					<div id="postbox-container-1" class="postbox-container">
 						<div class="meta-box-sortables">
 							<div class="postbox">
-								<div class="handlediv" title="Click to toggle"><br></div>
-								<h2 class="hndle"><span><?php esc_attr_e( 'About the plugin', 'bs3-grid-builder' ); ?></span></h2>
+								<div class="handlediv" title="<?php _e('Click to toggle', 'bs3-grid-builder'); ?>"><br></div>
+								<h2 class="hndle"><span><?php esc_attr_e( 'Looking for a stylish theme?', 'bs3-grid-builder' ); ?></span></h2>
 								<div class="inside">
-									<p><?php printf( __('Please read more about this awesome plugin on %s on the website of MyPreview LLC.' , 'bs3-grid-builder'), '<a href="https://www.mypreview.one/downloads/bs3-grid-builder" target="_blank">this post</a>' ); ?>
+									<p>
+										<a href="https://wp.me/p8930x-8q" target="_blank">
+											<img src="https://i.imgsafe.org/6a52b7b71e.jpg" style="max-width:100%;height:auto;" />
+										</a>
 									</p>
 									<p>
-										<?php _e( 'Copyright 2015-16' , 'bs3-grid-builder' ); ?>
-										&nbsp;
-										<a href="https://profiles.wordpress.org/mahdiyazdani/" target="_blank">Mahdi Yazdani</a>
+										<?php 
+											printf( __('In case you want to start an e-commerce project, the %s is one of the first things you need. The whole design of Hypermarket is ultra-responsive and Retina ready, offering you a site that can be accessed from any device, no matter the size or technology of its screen.' , 'woo-store-vacation'), '<a href="https://wp.me/p8930x-8q" target="_blank">Hypermarket WordPress Theme</a>' ); 
+										?>
 									</p>
 								</div><!-- .inside -->
 							</div><!-- .postbox -->
