@@ -3,46 +3,31 @@
  *
  * @author      Mahdi Yazdani
  * @package     BS3 Grid Builder
- * @since       1.0.3
+ * @since       1.0.5
  */
 #bs3-grid-builder-wrapper {
     display: none !important;
 }
 #bs3-grid-builder-btn {
     position: relative;
-    color: #cdbfe3;
     text-align: center;
+    font-weight: 400;
     box-shadow: none !important;
     text-shadow: 0 1px 0 rgba(0, 0, 0, .1);
-    background-color: #6f5499;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#563d7c), to(#6f5499));
-    background-image: -webkit-linear-gradient(top, #563d7c 0, #6f5499 100%);
-    background-image: -o-linear-gradient(top, #563d7c 0, #6f5499 100%);
-    background-image: linear-gradient(to bottom, #563d7c 0, #6f5499 100%);
-    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#563d7c', endColorstr='#6F5499', GradientType=0);
-    background-repeat: repeat-x;
 }
 #bs3-grid-builder-btn span {
     background-color: transparent;
-    border: 1px solid #cdbfe3;
+    border: 1px solid #000;
     border-radius: 15%;
-    color: #fff;
     padding: 1px 5px;
     margin-right: 10px;
 }
 #wp-editor-btn {
     position: relative;
-    color: #dfdfdf;
     text-align: center;
+    font-weight: 400;
     box-shadow: none !important;
     text-shadow: 0 1px 0 rgba(0, 0, 0, .1);
-    background-color: #0073aa;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#00a0d2), to(#0073aa));
-    background-image: -webkit-linear-gradient(top, #00a0d2 0, #0073aa 100%);
-    background-image: -o-linear-gradient(top, #00a0d2 0, #0073aa 100%);
-    background-image: linear-gradient(to bottom, #00a0d2 0, #0073aa 100%);
-    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#00a0d2', endColorstr='#0073aa', GradientType=0);
-    background-repeat: repeat-x;
 }
 #wp-editor-btn span {
     margin-top: 3px;
