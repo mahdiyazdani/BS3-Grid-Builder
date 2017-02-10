@@ -1,6 +1,4 @@
 # BS3-Grid-Builder
-Bootstrap Grid Builder is a powerful WordPress plugin for designing and prototyping websites.
-
 Bootstrap3 Grid Builder comes with a large number of built-in grid layouts, which you can drag and drop to assemble responsive web pages. 
 This plugin has specialized tools for working on the Bootstrap grid. Easily create, resize, offset columns, and apply responsive visibility classes.
 It built on top of the hugely popular Bootstrap framework, and exports clean and semantic HTML. Thousands of developers and designers use it every day. We are sure you'll love it too!
@@ -34,13 +32,25 @@ There is zero content lock-in with BS3 Grid Builder. The plugin can be deactivat
 
 Want to use Bootstrap grid system on non-bootstrap themes? No problem, navigate to plugin options page and turn on Bootstrap grid and responsive utility stylesheet to use it with any theme you want!
 
-[Download plugin from WordPress Repository] (https://wordpress.org/plugins/bs3-grid-builder/)
+**Want to see it in action?**
 
-[Get free support at WordPress forum] (https://wordpress.org/support/plugin/bs3-grid-builder)
+[Visit live demo](https://demo.mypreview.one/bs3-grid-builder)
 
-[Offical plugin post page] (https://www.mypreview.one/downloads/bs3-grid-builder/)
+**Translators & Non-English Speakers**
 
-[Visit live/online demo] (https://demo.mypreview.one/bs3-grid-builder/)
+Translators are welcome to contribute to the plugin. Please use the [WordPress translation website](https://translate.wordpress.org/projects/wp-plugins/bs3-grid-builder "WordPress translation website").
+
+**Get Involved**
+
+Want to contribute? Here's the [GitHub development repository](https://github.com/mahdiyazdani/BS3-Grid-Builder "GitHub development repository").
+
+**Free Support**
+
+All support is handled via a dedicated support forum, available at [Community Forums](https://support.mypreview.one "Community Forums"). Please head out there to open a new topic, in case you have any questions.
+
+**Support this plugin**
+
+Don't forget to rate this plugin [5 shining stars](https://wordpress.org/support/plugin/bs3-grid-builder/reviews/ "5 shining stars") if you like it, thanks!
 
 *Change-log*
 
