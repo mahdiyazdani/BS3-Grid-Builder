@@ -183,7 +183,7 @@ class BS3_Grid_Builder_Functions{
 			<label for="bs3_grid_builder_rows[{{data.id}}][row_disable_on]">
 				<?php esc_html_e( 'Disable on', 'bs3-grid-builder' ); ?>
 			</label>
-			<div class="bs3-grid-builder-modal-field-checkbox-group">
+			<div class="bs3-grid-builder-modal-field-checkbox-group bs3-visibility-options">
 				<ul>
 					<?php // Disable on Extra small devices ?>
 					<li>
