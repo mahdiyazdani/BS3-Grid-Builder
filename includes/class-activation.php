@@ -4,7 +4,7 @@
  *
  * @author      Mahdi Yazdani
  * @package     BS3 Grid Builder
- * @since       1.0.3
+ * @since       1.0.5
  */
 // Prevent direct file access
 defined( 'ABSPATH' ) or exit;
@@ -127,4 +127,3 @@ class BS3_Grid_Builder_Activation {
 }
 
 new BS3_Grid_Builder_Activation($file, $plugin);
-
