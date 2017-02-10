@@ -55,6 +55,10 @@ Don't forget to rate this plugin [5 shining stars](https://wordpress.org/support
 *Change-log*
 
 <pre>
+= 1.0.5 =
+* Fixed incompatibility with Safari browser.
+* Removed auto resize parameter for wp-editor.
+* Minor CSS improvements.
 = 1.0.4 =
 * Added a new filter for skipping readmore tag in blog posts.
 = 1.0.3 =
