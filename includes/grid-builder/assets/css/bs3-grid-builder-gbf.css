@@ -3,7 +3,7 @@
  *
  * @author      Mahdi Yazdani
  * @package     BS3 Grid Builder
- * @since       1.0.3
+ * @since       1.0.5
  */
  @font-face {
   font-family: 'BS3-Grid-Builder';
@@ -27,6 +27,9 @@ i.bs3-grid-builder-font-icon {
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+#wpcontent {
+    overflow-y: auto;
 }
 .bs3-grid-builder-12_12:before {
   content: "\e806";
@@ -97,8 +100,14 @@ i.bs3-grid-builder-font-icon {
 }
 .bs3-grid-builder-icon {
     display: block;
-    padding: 10px;
+    padding: 10px 5px;
     float: left;
+}
+.bs3_grid_builder_item_index {
+    padding: 10px 0 10px 5px;
+}
+.bs3-grid-builder-link.dashicons.dashicons-arrow-up {
+    padding: 10px 10px 10px 0;
 }
 .rtl .bs3-grid-builder-icon {
     float: right;
@@ -111,6 +120,7 @@ i.bs3-grid-builder-font-icon {
 }
 .bs3-grid-builder-grab {
     cursor: move;
+    padding-left: 10px;
 }
 .bs3-grid-builder-grabbing {
     cursor: -webkit-grabbing;
@@ -631,8 +641,9 @@ i.bs3-grid-builder-font-icon {
 }
 .bs3-grid-builder-modal-field-checkbox .bs3-grid-builder-modal-field-checkbox-group ul li {
     margin: 0 auto 5px;
-    min-width: 130px;
+    min-width: 144px;
     text-align: right;
+    float: right;
     display: inline-block;
 }
 .rtl .bs3-grid-builder-modal-field-checkbox .bs3-grid-builder-modal-field-checkbox-group {
