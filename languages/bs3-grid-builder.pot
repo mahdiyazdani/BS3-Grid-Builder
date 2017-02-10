@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: BS3 Grid Builder\n"
-"POT-Creation-Date: 2017-01-07 02:23+0400\n"
-"PO-Revision-Date: 2017-01-07 02:23+0400\n"
+"POT-Creation-Date: 2017-02-10 13:41+0400\n"
+"PO-Revision-Date: 2017-02-10 13:41+0400\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -57,7 +57,11 @@ msgid ""
 "again."
 msgstr ""
 
-#: includes/class-activation.php:123
+#: includes/class-activation.php:124
+msgid "Support"
+msgstr ""
+
+#: includes/class-activation.php:125
 msgid "Configuration"
 msgstr ""
 
@@ -257,7 +261,7 @@ msgstr ""
 msgid "Edit Content"
 msgstr ""
 
-#: includes/grid-builder/class-gbf.php:228
+#: includes/grid-builder/class-gbf.php:227
 msgid "The changes you made will be lost if you navigate away from this page"
 msgstr ""
 
@@ -365,40 +369,39 @@ msgid "Activate BS3 Grid Builder"
 msgstr ""
 
 #: includes/plugin-settings/class-options-page.php:82
-#: includes/plugin-settings/class-options-page.php:188
+#: includes/plugin-settings/class-options-page.php:191
 msgid "Post Types"
 msgstr ""
 
 #: includes/plugin-settings/class-options-page.php:89
+#: includes/plugin-settings/class-options-page.php:114
 msgid "Click to toggle"
 msgstr ""
 
 #: includes/plugin-settings/class-options-page.php:115
-msgid "About the plugin"
+msgid "Looking for a stylish theme?"
 msgstr ""
 
-#: includes/plugin-settings/class-options-page.php:117
+#: includes/plugin-settings/class-options-page.php:124
 #, php-format
 msgid ""
-"Please read more about this awesome plugin on %s on the website of MyPreview "
-"LLC."
+"In case you want to start an e-commerce project, the %s is one of the first "
+"things you need. The whole design of Hypermarket is ultra-responsive and "
+"Retina ready, offering you a site that can be accessed from any device, no "
+"matter the size or technology of its screen."
 msgstr ""
 
-#: includes/plugin-settings/class-options-page.php:120
-msgid "Copyright 2015-16"
-msgstr ""
-
-#: includes/plugin-settings/class-options-page.php:172
+#: includes/plugin-settings/class-options-page.php:175
 msgid "Enqueue Stylesheet"
 msgstr ""
 
-#: includes/plugin-settings/class-options-page.php:177
+#: includes/plugin-settings/class-options-page.php:180
 msgid ""
 "Bootstrap's responsive grid and responsive utility classes only, without any "
 "extras."
 msgstr ""
 
-#: includes/plugin-settings/class-options-page.php:206
+#: includes/plugin-settings/class-options-page.php:209
 msgid "Note: By default BS3 Grid Builder is available for pages only."
 msgstr ""
 
@@ -410,7 +413,7 @@ msgstr ""
 #. Description of the plugin/theme
 msgid ""
 "Bootstrap Grid Builder is a powerful WordPress plugin for designing and "
-"prototyping websites."
+"prototyping modern websites."
 msgstr ""
 
 #. Author of the plugin/theme
