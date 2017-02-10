@@ -120,9 +120,11 @@ class BS3_Grid_Builder_Activation {
 
 	// Add plugin config link to Plugins page
 	public function config_link( $links ) {
-	    $config_link = '<a href="options-general.php?page=bs3-grid-builder" target="_self">' . __( 'Configuration', 'bs3-grid-builder' ) . '</a>';
-	    array_push( $links, $config_link );
-	  	return $links;
+		$plugin_links = array(
+			'<a href="https://support.mypreview.one" target="_blank">' . __('Support', 'bs3-grid-builder') . '</a>',
+			'<a href="options-general.php?page=bs3-grid-builder" target="_self">' . __( 'Configuration', 'bs3-grid-builder' ) . '</a>'
+		);
+	  	return array_merge($plugin_links, $links);
 	}
 }
 
