@@ -216,7 +216,7 @@ class BS3_Grid_Builder_GBF{
 	// Admin scripts
 	public function scripts( $hook_suffix ){
 		global $post_type;
-		if( ! post_type_supports( $post_type, 'bs3_grid_builder' ) ):
+		if( in_array( $post_type, get_option('bs3_grid_builder_post_types_option_name') ) ):
 			return;
 		endif;
 		
